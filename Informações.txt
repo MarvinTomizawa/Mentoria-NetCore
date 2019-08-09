@@ -1,0 +1,4 @@
+ActionResult = Response que contem os dados do request.
+ModelState = Dados da request que mostram como estão os estados dos dados de acordo com o requirementes do DTO.
+BadRequest = Função que retorna de maneira simples um HTTP response de bad request.
+Ok = Factory que cria uma Http response Ok status 200
