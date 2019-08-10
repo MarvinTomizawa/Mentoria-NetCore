@@ -56,6 +56,7 @@ namespace Integracao.Services
 
         public IList<string> Atualizar(FuncionarioDto obj, int id)
         {
+            mensagens = new List<string>();
             try
             {
                 Cargo cargo = obterCargo(obj.CargoId);
