@@ -77,16 +77,5 @@ namespace Integracao.Controllers
 
             return ValidarRequest("Funcionario atualizado com sucesso.");
         }
-
-        private ActionResult ValidarRequest(string mensagemDeSucesso)
-        {
-            if (mensagens.Count != 0)
-            {
-                return BadRequest();
-            }
-
-            return Ok(new { Sucess = true, Message = mensagemDeSucesso });
-        }
-
     }
 }

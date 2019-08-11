@@ -51,7 +51,7 @@ namespace Integracao.Controllers
 
             mensagens = _empresaService.Adicionar(empresaDto);
 
-            return ValidarRequest(mensagens, "Adicionado com sucesso.");
+            return ValidarRequest("Adicionado com sucesso.");
         }
 
         [HttpPatch]
@@ -60,7 +60,7 @@ namespace Integracao.Controllers
         {
             mensagens = _empresaService.Inativar(id);
 
-            return ValidarRequest(mensagens, "Inativado com sucesso.");
+            return ValidarRequest("Inativado com sucesso.");
         }
 
         [HttpPut]
@@ -71,17 +71,7 @@ namespace Integracao.Controllers
 
             mensagens = _empresaService.Atualizar(empresaDto, id);
 
-            return ValidarRequest(mensagens, "Atualizado com sucesso.");
-        }
-
-        private ActionResult ValidarRequest(IList<string> mensagens, string mensagemDeSucesso)
-        {
-            if (mensagens.Count != 0)
-            {
-                return BadRequest();
-            }
-
-            return Ok(new { Sucess = true, Message = mensagemDeSucesso });
+            return ValidarRequest("Atualizado com sucesso.");
         }
     }
 }
