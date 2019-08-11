@@ -13,7 +13,7 @@ namespace Integracao.Controllers
         {
             if (mensagens.Count != 0)
             {
-                return BadRequest();
+                return BadRequest(mensagens);
             }
 
             return Ok(new { Success = true, Messagem = mensagemDeSucesso });
